@@ -1,17 +1,47 @@
-$Id: $
-
 INTRODUCTION
 
+    trimpack is a set of utilities for military surplus Trimble
+    Trimpack GPS receivers. These utilities communicate with a Trimble
+    Trimpack GPS receiver using its binary communication protocol.
+    Military-surplus Trimpack GPS receivers include an RS-422 data
+    port which normally operates at 9600 baud, 8 data bits, odd
+    parity, one stop bit. Later models may be configured to output
+    NMEA-0183, but trimpack utilities only understand the binary
+    output format.
 
+    This software is based upon the data interface specification in
+    this manual, which the author purchased as a printed copy from
+    Trimble many years ago:
+
+        TRIMPACK (tm) Specification, Installation and Reference Manual
+	Includes HAVE-QUICK Option
+	Part Number 13498
+	Revision D
+	October 1990
 
 SYSTEM REQUIREMENTS
+
+    You will need appropriate hardware to connect a Trimpack to your
+    computer. The trimpack utilities expect to use a standard serial
+    port on your computer. It is possible to connect a Trimpack to an
+    ordinary RS-232 port, even though the Trimpack uses RS-422
+    electrical signalling. Here is the pinout of the I/O connector on
+    a military Trimpack:
+
+    Pin	    Name	Direction	Description
+    ----------------------------------------------------------------------
+     A	    RXD(-)	Input		Receive Data -
+     B	    TXD(-)	Output		Transmit Data -
+     C	    TXD(+)	Output		Transmit Data +
+     D	    RXD(+)	Input		Receive Data +
+     E	    HQ/PPS	Output		Pulse-Per-Second or HAVE QUICK
+     F	    GND				Signal Ground
 
 
 COMPILING
 
     ./configure
     make
-    make check
     make install
 
 DOCUMENTATION

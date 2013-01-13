@@ -16,54 +16,29 @@
 .\"   You should have received a copy of the GNU General Public License
 .\"   along with Trimpack.  If not, see <http://www.gnu.org/licenses/>.
 .\" **************************************************************************
-.TH trimdiag 1 "May, 2009" "Version 0.1" "USER COMMANDS"
+.TH trimpack 1 "May, 2009" "Version 0.1" "USER COMMANDS"
 .
 .SH NAME
-trimdiag \- get diagnostic information from a Trimble Trimpack GPS receiver
-.
-.SH SYNOPSIS
-.HP
-.B trimdiag
-.I port
+trimpack \- utilities for Trimble Trimpack GPS receivers
 .
 .SH DESCRIPTION
-.B trimdiag
-communicates with a Trimble Trimpack GPS receiver using its binary communication
-protocol. It requests diagnostic information from the receiver and then
-prints a human-readable summary of it to stdout.
-.
-Military-surplus Trimpack GPS receivers include an RS-422 data port which
-normally operates at 9600 baud, 8 data bits, odd parity, one stop bit. Later
-models may be configured to output NMEA-0183, but
-.B trimdiag
-only understands and interprets the binary output format.
-.
-.PP
-Invoke
-.B trimdiag
-with a single argument: the path to a serial port connected to a Trimpack.
-.
-.B trimdiag
-will attempt to configure that serial port, and then will request diagnostic information and print human-readable summaries of the received data. It only prints the requested
-packets, and ignores any other received packets.
-.
-.SH OPTIONS
-.
-.TP
-.I port
-Path to serial port connected to a Trimpack GPS receiver.
-.
-.SH EXAMPLES
-.PP
-trimdiag /dev/ttyS0
-.
+.B trimpack
+is a set of utilities for the Trimble Trimpack GPS receivers.
+
+.B trimpack
+utilities communicate with a Trimble Trimpack GPS receiver using its
+binary communication protocol. Military-surplus Trimpack GPS receivers
+include an RS-422 data port which normally operates at 9600 baud, 8
+data bits, odd parity, one stop bit. Later models may be configured to
+output NMEA-0183, but
+.B trimpack
+utilities only understand the binary output format.
 .SH SEE ALSO
-trimpack(1)
+trimdiag(1)
+trimdump(1)
 .SH COPYRIGHT
 .PP
 Copyright (C) 2009 Mark J. Blair
-.PP
-trimdiag is part of the trimpack project.
 .PP
 trimpack is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

@@ -15,8 +15,6 @@
  *
  *  You should have received a copy of the GNU General Public License
  *  along with trimpack.  If not, see <http://www.gnu.org/licenses/>.
- *
- * $Id: $
  **************************************************************************/
 
 
@@ -28,6 +26,8 @@
     static int		yy_inp;
     
 #define YY_DECL unsigned char packet(int inp, int *pkt_len, unsigned char *pkt_data, int max_pkt_len)
+
+#define YY_NO_INPUT
 
 #define YY_INPUT(buf, result, max_size) \
     {					\

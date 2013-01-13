@@ -1,16 +1,15 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 #
-# $Id:$
 
 AC_PREREQ(2.60)
-AC_INIT(trimpack, 0.1, nf6x@nf6x.net)
+AC_INIT([trimpack], [0.1], [Mark J. Blair <nf6x@nf6x.net>], [hd])
 AC_CONFIG_SRCDIR([trimdump.c])
-AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip])
 AC_CONFIG_HEADER([config.h])
+AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip])
+AM_SILENT_RULES([yes])
 
-AC_SUBST(CFLAGS, [-Wall])
-AC_SUBST(CXXFLAGS, [-Wall])
+AC_SUBST(CFLAGS, [-O2 -Wall])
 
 # Checks for programs.
 AC_PROG_CC

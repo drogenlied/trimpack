@@ -1,13 +1,7 @@
-$Id: $
-
 COMPILING
 
     ./configure
     make
-
-TESTING
-
-    make check
 
 INSTALLATION
 
