@@ -1,0 +1,90 @@
+.\" **************************************************************************
+.\"  Copyright (C) 2009 Mark J. Blair, NF6X
+.\"
+.\"  This file is part of Trimpack
+.\"
+.\"   Trimpack is free software: you can redistribute it and/or modify
+.\"   it under the terms of the GNU General Public License as published by
+.\"   the Free Software Foundation, either version 3 of the License, or
+.\"   (at your option) any later version.
+.\"
+.\"   Trimpack is distributed in the hope that it will be useful,
+.\"   but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\"   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\"   GNU General Public License for more details.
+.\"
+.\"   You should have received a copy of the GNU General Public License
+.\"   along with Trimpack.  If not, see <http://www.gnu.org/licenses/>.
+.\"
+.\"  $Id:$
+.\" **************************************************************************
+.TH m209 1 "May, 2009" "Version 1.0" "USER COMMANDS"
+.
+.SH NAME
+trimdump \- decode output from a Trimble Trimpack GPS receiver
+.
+.SH SYNOPSIS
+.HP
+.B trimdump
+.I port
+.
+.SH DESCRIPTION
+.B trimdump
+interprets the binary data output from a Trimble Trimpack GPS receiver and
+prints a human-readable summary of it to stdout.
+.
+Military-surplus Trimpack GPS receivers include an RS-422 data port which
+normally operates at 9600 baud, 8 data bits, odd parity, one stop bit. Later
+models may be configured to output NMEA-0183, but
+.B trimdump
+only understands and interprets the binary output format.
+.
+.PP
+Invoke
+.B trimdump
+with a single argument: the path to a serial port connected to a Trimpack.
+.
+.B trimdump
+will attempt to configure that serial port, and then will print human-readable
+summaries of each packet received from the Trimpack until the process is killed.
+.
+.SH OPTIONS
+.
+.TP
+.I port
+Path to serial port connected to a Trimpack GPS receiver.
+.
+.SH EXAMPLES
+.PP
+trimdump /dev/ttyS0
+.
+.SH SEE ALSO
+trimpack(1)
+.SH COPYRIGHT
+.PP
+Copyright (C) 2009 Mark J. Blair
+.PP
+trimdump is part of the trimpack project.
+.PP
+trimpack is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+.PP
+trimpack is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+.
+See the GNU General Public License for more details.
+.PP
+You should have received a copy of the GNU General Public License
+along with trimpack.
+.
+If not, see <http://www.gnu.org/licenses/>.
+.
+.SH AUTHOR
+.PP
+Mark J. Blair, NF6X <nf6x@nf6x.net>
+.br
+http://www.nf6x.net
+.

@@ -1,0 +1,16 @@
+$Id: $
+
+COMPILING
+
+    ./configure
+    make
+
+TESTING
+
+    make check
+
+INSTALLATION
+
+    make install
+
+
