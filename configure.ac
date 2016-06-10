@@ -9,7 +9,7 @@ AC_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip])
 AM_SILENT_RULES([yes])
 
-AC_SUBST(CFLAGS, [-O2 -Wall])
+AC_SUBST(CFLAGS, ["-O2 -Wall"])
 
 # Checks for programs.
 AC_PROG_CC

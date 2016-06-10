@@ -78,7 +78,7 @@ int main (int argc, char **argv)
 
     new_action.sa_handler = alarm_handler;
     new_action.sa_flags = 0;
-    new_action.sa_mask = 0;
+    sigemptyset(&new_action.sa_mask);
     sigaction(SIGALRM, &new_action, NULL);
     
 
